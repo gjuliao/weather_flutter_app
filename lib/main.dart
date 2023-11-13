@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(MaterialApp(
+void main() => runApp(const MaterialApp(
   home: Card(),
 ));
 
 class Card extends StatefulWidget {
+  const Card({super.key});
+
   //const Card({super.key});
 
   @override
@@ -29,8 +31,8 @@ class _CardState extends State<Card> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            Center(
-              child: const CircleAvatar(
+            const Center(
+              child: CircleAvatar(
                 backgroundImage: AssetImage('assets/dummy_user.png'),
                 radius: 40.0,
               ),
@@ -68,7 +70,7 @@ class _CardState extends State<Card> {
             const SizedBox(height: 10.0),
             Text(
               '$ninjaLevel',
-              style: TextStyle(
+              style: const TextStyle(
                 color: Colors.amberAccent,
                 letterSpacing: 2.0,
                 fontWeight: FontWeight.bold,
